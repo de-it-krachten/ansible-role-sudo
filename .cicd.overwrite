@@ -11,3 +11,6 @@ generic:
 molecule:
   requirements:
     roles_extra: []
+  converge:
+    vars:
+      sudo_hardening: true

@@ -3,6 +3,8 @@
 - name: Converge
   hosts: all
   become: "yes"
+  vars:
+    sudo_hardening: True
   tasks:
     - name: Include role 'ansible-role-sudo'
       ansible.builtin.include_role:

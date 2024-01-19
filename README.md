@@ -13,7 +13,7 @@ Installs/configures sudo with optional hardening
 None
 
 #### Collections
-- community.general
+None
 
 ## Platforms
 
@@ -67,6 +67,8 @@ sudo_hardening: false
 - name: sample playbook for role 'sudo'
   hosts: all
   become: 'yes'
+  vars:
+    sudo_hardening: true
   tasks:
     - name: Include role 'sudo'
       ansible.builtin.include_role:
