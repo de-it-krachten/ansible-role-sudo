@@ -1,0 +1,14 @@
+---
+
+# List of audi packages
+sudo_packages:
+  - sudo
+
+# Sudo log file
+sudo_logfile: /var/log/sudo.log
+
+# Timeout before re-authentication
+sudo_timestamp_timeout: 5
+
+# Perform sudo hardening rules (CIS1/2)
+sudo_hardening: false

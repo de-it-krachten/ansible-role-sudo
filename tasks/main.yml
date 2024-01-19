@@ -1,0 +1,8 @@
+---
+
+- name: Install sudo
+  ansible.builtin.include_tasks: install.yml
+
+- name: Implement hardening rules
+  ansible.builtin.include_tasks: hardening.yml
+  when: sudo_hardening | bool
