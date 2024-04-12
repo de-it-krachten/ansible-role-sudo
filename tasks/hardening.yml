@@ -1,0 +1,40 @@
+---
+
+- name: Activate logging
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    line: "Defaults\tlogfile={{ sudo_logfile }}"
+    regexp: "^Defaults\\s+logfile="
+    validate: /usr/sbin/visudo -cf %s
+    insertafter: "^Defaults\\s+"
+
+- name: Require re-authentication after `sudo_timestamp_timeout` seconds
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    regexp: ^[\s]*Defaults\s(.*)\btimestamp_timeout[\s]*=[\s]*[-]?\w+\b(.*)$
+    line: Defaults \1timestamp_timeout={{ sudo_timestamp_timeout }}\2
+    validate: /usr/sbin/visudo -cf %s
+    backrefs: true
+
+- name: Ensure use_pty is enabled in /etc/sudoers
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    regexp: ^[\s]*Defaults.*\buse_pty\b.*$
+    line: Defaults use_pty
+    validate: /usr/sbin/visudo -cf %s
+    insertafter: "^Defaults\\s+"
+
+- name: Search for files in /etc/sudoers.d with timestamp_timeout set
+  ansible.builtin.find:
+    path: /etc/sudoers.d
+    patterns: '*'
+    contains: ^[\s]*Defaults\s.*\btimestamp_timeout[\s]*=.*
+  register: sudoers_d_defaults_timestamp_timeout
+
+- name: Remove timestamp_timeout lines
+  ansible.builtin.lineinfile:
+    path: '{{ item.path }}'
+    regexp: ^[\s]*Defaults\s.*\btimestamp_timeout[\s]*=.*
+    state: absent
+    validate: /usr/sbin/visudo -cf %s
+  loop: '{{ sudoers_d_defaults_timestamp_timeout.files }}'

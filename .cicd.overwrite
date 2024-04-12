@@ -1,0 +1,16 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-sudo
+  role_short: sudo
+  role_description: |
+    Installs/configures sudo with optional hardening
+  collections: []
+
+molecule:
+  requirements:
+    roles_extra: []
+  converge:
+    vars:
+      sudo_hardening: true
