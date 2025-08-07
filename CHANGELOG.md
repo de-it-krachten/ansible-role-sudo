@@ -1,3 +1,14 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.2.0...v1.3.0) (2025-08-07)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([116a239](https://github.com/de-it-krachten/ansible-role-sudo/commit/116a239626bcd6cca3d84101501cc6c69c59a0a7))
+* Add support for Debian 13 (Trixie) ([a1a0dda](https://github.com/de-it-krachten/ansible-role-sudo/commit/a1a0dda42113fd3b3b6b00cf00a32f4099d72091))
+* Add support for OracleLinux 10 ([d80a2d2](https://github.com/de-it-krachten/ansible-role-sudo/commit/d80a2d2c5af4a6b546ec39b12d9b82fc0d3d91d3))
+* Add support for Red Hat Enterprise Linux 10 ([3b932ae](https://github.com/de-it-krachten/ansible-role-sudo/commit/3b932ae3a6715dce51f240fcf6d5e2d381aa4663))
+* Add support for RockyLinux 10 ([611e6a3](https://github.com/de-it-krachten/ansible-role-sudo/commit/611e6a3a3e7da79b1750679cdbdf2063d1457cf2))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.1.0...v1.2.0) (2024-12-29)
 
 
