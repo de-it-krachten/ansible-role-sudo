@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.4.0...v1.5.0) (2026-07-26)
+
+
+### Features
+
+* Added support for Fedora 44 ([acbad25](https://github.com/de-it-krachten/ansible-role-sudo/commit/acbad253cac25671aa112296b35910189a1ade9c))
+* Added support for Ubuntu 26.04 LTS ([8f1f66e](https://github.com/de-it-krachten/ansible-role-sudo/commit/8f1f66e6a5e3c2fb4e07e6e1de3057ec15db0570))
+* Drop support for Fedora 42 ([0fe0834](https://github.com/de-it-krachten/ansible-role-sudo/commit/0fe08341628b25b5120283da734bddecc2414d99))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.3.0...v1.4.0) (2026-03-15)
 
 
