@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.5.0...v1.6.0) (2026-10-30)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([995ffbd](https://github.com/de-it-krachten/ansible-role-sudo/commit/995ffbd810c764a0e444fbf25ddaf388363b0bac))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-sudo/compare/v1.4.0...v1.5.0) (2026-07-26)
 
 
